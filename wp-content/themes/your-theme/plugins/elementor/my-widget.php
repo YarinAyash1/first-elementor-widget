@@ -51,7 +51,7 @@ class Widget_My_Custom_Elementor_Thing extends Widget_Base {
 		$this->add_control(
 			'image',
 			[
-				'label' => __( 'Choose Image', 'elementor' ),
+				'label' => __( 'בחר תמונה', 'elementor' ),
 				'type' => Controls_Manager::MEDIA,
 				'dynamic' => [
 					'active' => true,

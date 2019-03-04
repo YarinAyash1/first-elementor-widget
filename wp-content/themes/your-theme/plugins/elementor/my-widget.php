@@ -51,7 +51,7 @@ class Widget_My_Custom_Elementor_Thing extends Widget_Base {
 		$this->add_control(
 			'image',
 			[
-				'label' => __( 'בחר תמונה', 'elementor' ),
+				'label' => __( 'Choose Image', 'elementor' ),
 				'type' => Controls_Manager::MEDIA,
 				'dynamic' => [
 					'active' => true,
@@ -69,8 +69,8 @@ class Widget_My_Custom_Elementor_Thing extends Widget_Base {
 
 		$settings = $this->get_settings_for_display();
 
-		$fname = wp_oembed_get( $settings['fname'] );
-		$lname = wp_oembed_get( $settings['lname'] );
+		$fname = $settings['fname'];
+		$lname = $settings['lname'];
 		echo '<div class="elementor-widget text-center">';
 
 		$firstName = ( $fname ) ? $fname : $settings['fname'];
@@ -94,5 +94,3 @@ class Widget_My_Custom_Elementor_Thing extends Widget_Base {
 	}
 
 }
-
-
